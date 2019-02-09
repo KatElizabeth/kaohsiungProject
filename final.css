@@ -1,0 +1,85 @@
+@charset "utf-8";
+
+/* FinalProject External Style Sheet - Kathryn Nelson */
+
+@font-face {
+    font-family: 'Lato';
+    src: url('fonts/Lato-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    }
+
+@font-face {
+    font-family: 'Variane Script';
+    src: url('fonts/VarianeScript.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    }
+
+/*apply border-box to all elements to have more control over sizes*/
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+body {
+    /* reset browser margins- to remove left/right white areas next to nav bar*/
+    margin: 0;
+    padding: 0;
+    font-family: 'Lato', sans-serif;
+    height: 100%;
+    background-color: whitesmoke;
+}
+
+h1 {
+    display: inline-block;
+    font-weight: lighter;
+    font-family: "Variane Script", sans-serif;
+    margin-left: 60px;
+    margin-right: 60px;
+    margin-bottom: -3px;
+    font-size: 4em;
+    text-shadow: lightgray -1px -1px;
+}
+
+p, h2, h3, h4 { margin-left: 70px; margin-right: 70px; }
+
+figcaption {font-style: italic; color: gray;}
+
+/*for consistent right & left floated images w/ figcaption*/
+figure.right { float: right; margin-right: 60px; text-align: center; }
+figure.left { float: left; margin-left: 60px; text-align: center; }
+
+/*creates my nav bar*/
+#nav { text-align: center; }
+#nav li { list-style: none; display: inline-block; }
+#nav a { color: whitesmoke; display: block; margin: 0; padding: 14px 16px; text-decoration: none; }
+#nav a:hover { background-color: black; color: slategray; }
+
+ul {
+    font-size: 1em;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: black;
+    position: -webkit-sticky; /* Safari */
+    position: sticky;
+    top: 0;
+}
+
+/*#headerImage is used to allow my top image to resize with the browser size, while keeping aspect ratio*/
+#headerImage { margin-top: 0; margin-bottom: -4px; background-color: black }
+#headerImage img { width: 100%; border-top: solid black 2em; }
+#headerImage h2 { position: absolute; top: 65%; left: 0; width: 100%; text-align: center; }
+
+table { margin-left:90px; border-collapse: collapse; width: 25%; }
+
+td, th { border: 1px solid black; text-align: left; }
+
+tr:nth-child(odd) { background-color: #dddddd; } /*alternate table row colors*/
+
+footer {text-align: center; color: rebeccapurple}
+
+.clear_both {  clear: both; }
